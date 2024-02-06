@@ -1,19 +1,40 @@
 
 <?php
 
+    trait Discountable {
+        protected $discount;
+
+        public function setDiscount($discount) {
+            $this->discount = $discount;
+        }
+
+        public function getDiscount() {
+            return $this->discount;
+        }
+
+        public function hasDiscount() {
+            return $this->discount > 0;
+        }
+    }
+
+
     class Product {
+        use Discountable;
+
         private $id;
         private $name;
         private $price;
         private $category;
         private $image;
+        private $type;
 
-        public function __construct($id, $name, $price, $category, $image) {
+        public function __construct($id, $name, $price, $category, $image, $type) {
             $this -> setId($id);
             $this-> setName($name);
             $this-> setPrice($price);
             $this-> setCategory($category);
             $this-> setImage($image);
+            $this-> setType($type);
         }
 
         public function getId() {
@@ -49,6 +70,13 @@
         }
         public function setImage($image) {
             $this->image = $image;
+        }
+
+        public function getType() {
+            return $this->type;
+        }
+        public function setType($type) {
+            $this->type = $type;
         }
     }
 

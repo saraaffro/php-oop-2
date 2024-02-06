@@ -7,7 +7,6 @@
     <?php
 
         require_once(__DIR__ . "/models/product.php");
-        require_once(__DIR__ . "/models/typology.php");
         require_once(__DIR__ . "/db/products.php");
     
     ?>
@@ -33,6 +32,11 @@
                     <img src="<?php echo $product->getCategory() ?>" alt="Category Image">
                 </div>
                 <p>Tipologia: <?php echo $product->getType() ?></p>
+                <?php if ($product->hasDiscount()){ ?>
+                    <p>Sconto disponibile</p>
+                <?php } else { ?>
+                    <p>Sconto non disponibile</p>
+                <?php }?>
             </div>
         <?php } 
         } catch (Exception $e) {
