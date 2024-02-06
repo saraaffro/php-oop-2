@@ -16,7 +16,8 @@
 <body>
     <h1>SHOP</h1>
     <div class="row">
-        <?php try {
+        <?php 
+        try {
             foreach ($products as $product){ 
                 if ($product->getPrice() < 0) {
                     throw new Exception('Il prezzo del prodotto non può essere negativo.');
@@ -33,8 +34,9 @@
                 </div>
                 <p>Tipologia: <?php echo $product->getType() ?></p>
             </div>
-        <?php } } catch (Exception $e) {
-            echo "Errore: " . $e->getMessage();
+        <?php } 
+        } catch (Exception $e) {
+            echo 'Errore: ' . $e->getMessage();
             }   
         ?>
     </div>

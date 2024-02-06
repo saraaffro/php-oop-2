@@ -7,7 +7,7 @@
         new Typology(4, 'Croccantini', 8.99, 'https://as1.ftcdn.net/v2/jpg/03/27/63/14/1000_F_327631420_6tn7qBUphpPEzBKuHJp9TgAAFc8Snsxk.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0zM-F4B5FnbBuSC49sR97Wxdd1a_rlKqUtw&usqp=CAU', 'Umido'),
         new Typology(5, 'Tiragraffi', 46.99, 'https://as1.ftcdn.net/v2/jpg/03/27/63/14/1000_F_327631420_6tn7qBUphpPEzBKuHJp9TgAAFc8Snsxk.jpg', 'https://arcaplanet.vtexassets.com/arquivos/ids/279208/lovedi-tiragraffi-delaware.jpg?v=638102388893670000', 'Gioco'),
         new Typology(6, 'Vestito Natalizio', 15.55, 'https://as1.ftcdn.net/v2/jpg/03/27/63/14/1000_F_327631420_6tn7qBUphpPEzBKuHJp9TgAAFc8Snsxk.jpg', 'https://shop-cdn-m.mediazs.com/bilder/9/400/114905_pla_hundemantel_santa_hs_01_9.jpg', 'Vestiti'),
-        new Typology(7, 'Prodotto con prezzo negativo', -5, 'immagine.png', 'gioco')
+        new Typology(7, 'Prodotto con prezzo negativo', -5, 'immagine.png','immagine.png', 'gioco')
     ];
 
     
