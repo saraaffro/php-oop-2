@@ -1,5 +1,6 @@
 
 <?php
+
     class Product {
         private $id;
         private $name;
@@ -50,3 +51,5 @@
             $this->image = $image;
         }
     }
+
+    

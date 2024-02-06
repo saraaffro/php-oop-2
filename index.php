@@ -16,7 +16,12 @@
 <body>
     <h1>SHOP</h1>
     <div class="row">
-        <?php foreach ($products as $product){ ?>
+        <?php try {
+            foreach ($products as $product){ 
+                if ($product->getPrice() < 0) {
+                    throw new Exception('Il prezzo del prodotto non può essere negativo.');
+                }
+        ?>
             <div class="card">
                 <div class="img-container">
                     <img src="<?php echo $product->getImage() ?>" alt="Product Image">
@@ -28,7 +33,10 @@
                 </div>
                 <p>Tipologia: <?php echo $product->getType() ?></p>
             </div>
-        <?php }?>
+        <?php } } catch (Exception $e) {
+            echo "Errore: " . $e->getMessage();
+            }   
+        ?>
     </div>
 
 </body>
