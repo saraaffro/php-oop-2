@@ -33,7 +33,7 @@
                 </div>
                 <p>Tipologia: <?php echo $product->getType() ?></p>
                 <?php if ($product->hasDiscount()){ ?>
-                    <p>Sconto disponibile</p>
+                    <p>Sconto disponibile <?php echo $product -> getDiscount()?>%</p>
                 <?php } else { ?>
                     <p>Sconto non disponibile</p>
                 <?php }?>
